@@ -2,7 +2,9 @@
 
 ---
 
-The speedy velocity utility plugin. A fully configurable and easy to use plugin with a variety of features and commands. Everything is configurable in the config.
+The speedy velocity utility plugin. Made for a Velocity Minecraft server.
+
+A fully configurable and easy to use plugin with a variety of features and commands. Everything is configurable in the config.
 
 
 ![Latest Version](https://img.shields.io/github/v/release/LightningReflex/LightningUtils?style=flat-square)
