@@ -39,7 +39,7 @@ commands:
     # {server} - The server the player is on
     # {player} - The player's name
     # {message} - The message the player sent
-    message: '<gray><bold>[STAFF]</bold></gray> <gold>{player}</gold>: <gray>{message}</gray>'
+    message: '<red><bold>S</bold></red> <dark_gray>[<gray>{server}</gray>]</dark_gray> <aqua><click:run_command:/server {server}><hover:show_text:"<gray>Click to connect to <gold>{server}</gold>.</gray>">{player}</hover></click></aqua> <dark_gray>:</dark_gray> <white>{message}</white>'
     toggle_disabled: '<red>✖</red> <gray>Staff chat toggling is <gold>disabled<gold> in the config.</gray>'
     enabled: '<green>✔</green> <gray>Staff chat has been <gold>enabled</gold>.</gray>'
     disabled: '<red>✖</red> <gray>Staff chat has been <gold>disabled</gold>.</gray>'
