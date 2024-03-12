@@ -20,7 +20,7 @@ public class AlertCommand {
     public BrigadierCommand createBrigadierCommand(String command) {
         LiteralCommandNode<CommandSource> node = LiteralArgumentBuilder
             .<CommandSource>literal(command)
-            .requires(ctx -> Utils.hasPermission((Player) ctx, commands.getAlert().getPermission()))
+            .requires(ctx -> Utils.hasPermission(ctx, commands.getAlert().getPermission()))
             .then(
                 BrigadierCommand.requiredArgumentBuilder(langAlert.getArguments().getMessage(), StringArgumentType.greedyString())
                 .executes(this::execute)

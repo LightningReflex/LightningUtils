@@ -31,6 +31,13 @@ commands:
       - 'lobby'
       - 'hub'
 
+  staffchat:
+    enabled: true
+    permission: 'staffchat'
+    aliases:
+      - 'staffchat'
+      - 'sc'
+
 
 # The fallback chain of where to send players
 # when they are kicked from a server.
@@ -60,12 +67,28 @@ fallback:
 lobby:
   # Order to send players in.
   # random: Send players to a random lobby.
-  # priority: Send players to the lobby with the least players.
+  # priority: Send players to the lobby with
+  #   the least players.
   #
   # Valid lobbies are checked with regex.
   order: 'priority'
   valid_lobbies:
     - 'lobby-[0-9]+'
 
+staffchat:
+  enabled: true
+  # Whether to allow toggling the staff chat if
+  # no message is provided.
+  # To use this, the server might have to have the
+  # SignedVelocity plugin installed.
+  allow_toggle: true
+  # Whether to allow prefixing the message with
+  # a certain string will send the message to the
+  # staff chat.
+  # To use this, the server might have to have the
+  # SignedVelocity plugin installed.
+  allow_prefix: true
+  # The prefix to use for the staff chat.
+  prefix: '$'
 
 config_version: 1.0

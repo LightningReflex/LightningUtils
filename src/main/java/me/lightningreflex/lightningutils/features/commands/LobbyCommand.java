@@ -26,7 +26,7 @@ public class LobbyCommand {
     public BrigadierCommand createBrigadierCommand(String command) {
         LiteralCommandNode<CommandSource> node = LiteralArgumentBuilder
             .<CommandSource>literal(command)
-            .requires(ctx -> Utils.hasPermission((Player) ctx, commands.getLobby().getPermission()))
+            .requires(ctx -> Utils.hasPermission(ctx, commands.getLobby().getPermission()))
             .then(
                 BrigadierCommand.requiredArgumentBuilder(langLobby.getArguments().getServer(), StringArgumentType.word())
                     .suggests((ctx, builder) -> {

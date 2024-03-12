@@ -62,7 +62,22 @@ public class LangConfig extends Config {
                 public String server;
                 public String invalid_syntax;
             }
+        }
 
+        public StaffChat staffchat;
+        @Getter
+        public static class StaffChat {
+            public String message;
+            public String toggle_disabled;
+            public String enabled;
+            public String disabled;
+
+            public Arguments arguments;
+            @Getter
+            public static class Arguments {
+                public String message;
+                public String invalid_syntax;
+            }
         }
     }
 
