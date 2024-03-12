@@ -1,0 +1,71 @@
+#
+# Hi, thanks for trying out LightningUtils!
+# This is the configuration file for the plugin.
+#
+
+
+# Specify which commands are enabled and the
+# aliases that can be used for them.
+# All permission nodes specified below are
+# prefixed with "lightningutils.". If
+# the permission is empty ('') then everyone
+# has access to the command.
+commands:
+  send:
+    enabled: true
+    permission: 'send'
+    aliases:
+      - 'send'
+      - 'transfer'
+
+  alert:
+    enabled: true
+    permission: 'alert'
+    aliases:
+      - 'alert'
+
+  lobby:
+    enabled: true
+    permission: ''
+    aliases:
+      - 'lobby'
+      - 'hub'
+
+
+# The fallback chain of where to send players
+# when they are kicked from a server.
+#
+# This list will be applied when they are
+# kicked while online, when they join a server,
+# and when they join the network.
+#
+# In this example below the players will by
+# default be kicked to the "lobby" server and,
+# if they are kicked from the "lobby" server
+# they will be sent to the "limbo" server. But
+# if they are kicked from the "limbo" server
+# they will be kicked from the network.
+fallback:
+  enabled: true
+  default_server: 'lobby'
+  servers:
+    lobby:
+      kick: false
+      fallback: 'limbo'
+    limbo:
+      kick: true
+      fallback: ''
+
+
+lobby:
+  # Order to send players in.
+  # random: Send players to a random lobby.
+  # priority: Send players to the lobby with the least players.
+  #
+  # Valid lobbies are checked with regex.
+  order: 'priority'
+  valid_lobbies:
+    - 'lobby-[0-9]+'
+
+
+config_version: 1.0

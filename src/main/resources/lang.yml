@@ -1,0 +1,39 @@
+#
+# Hi, thanks for trying out LightningUtils!
+# This is the language file for the plugin.
+#
+
+
+# For color formatting please follow the following documentation:
+# https://docs.advntr.dev/minimessage/format.html
+
+commands:
+  send:
+    success_executor: '<green>✔</green> <gray>Successfully sent <gold>%1$s</gold> to <gold>%2$s</gold>.</gray>'
+    warning_player: '<gold>⚠</gold> <gray>You have been sent to <gold>%1$s</gold> by <gold>%2$s</gold>.</gray>'
+    server_does_not_exist: '<red>✖</red> <gray>The server <gold>%1$s</gold> does not exist.</gray>'
+    player_offline: '<red>✖</red> <gray>The player <gold>%1$s</gold> is not online.</gray>'
+
+    arguments:
+      from: 'from'
+      to: 'to'
+      invalid_syntax: '<red>✖</red> <gray>Invalid syntax! <gold>/send <from> <to></gold></gray>'
+
+  alert:
+    message: '<red><bold>ALERT</bold></red> <gray>%1$s</gray>'
+
+    arguments:
+      message: 'message'
+      invalid_syntax: '<red>✖</red> <gray>Invalid syntax! <gold>/alert <message></gold></gray>'
+
+  lobby:
+    already_in_lobby: '<red>✖</red> <gray>You are already in <gold>%1$s</gold>.</gray>'
+    success: '<green><bold>✔</bold></green> <gray>You have been sent to <gold>%1$s</gold>.</gray>'
+    server_does_not_exist: '<red>✖</red> <gray>The server <gold>%1$s</gold> does not exist.</gray>'
+    is_not_lobby: '<red>✖</red> <gray>The server <gold>%1$s</gold> is not a lobby.</gray>'
+    arguments:
+      server: 'server'
+      invalid_syntax: '<red>✖</red> <gray>Invalid syntax! <gold>/lobby <server></gold></gray>'
+
+
+lang_version: 1.0
