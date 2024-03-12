@@ -35,5 +35,18 @@ commands:
       server: 'server'
       invalid_syntax: '<red>✖</red> <gray>Invalid syntax! <gold>/lobby <server></gold></gray>'
 
+  staffchat:
+    # {server} - The server the player is on
+    # {player} - The player's name
+    # {message} - The message the player sent
+    message: '<gray><bold>[STAFF]</bold></gray> <gold>{player}</gold>: <gray>{message}</gray>'
+    toggle_disabled: '<red>✖</red> <gray>Staff chat toggling is <gold>disabled<gold> in the config.</gray>'
+    enabled: '<green>✔</green> <gray>Staff chat has been <gold>enabled</gold>.</gray>'
+    disabled: '<red>✖</red> <gray>Staff chat has been <gold>disabled</gold>.</gray>'
+
+    arguments:
+      message: 'message'
+      invalid_syntax: '<red>✖</red> <gray>Invalid syntax! <gold>/staffchat <message></gold></gray>'
+
 
 lang_version: 1.0

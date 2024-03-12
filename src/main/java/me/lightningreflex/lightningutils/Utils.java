@@ -1,6 +1,8 @@
 package me.lightningreflex.lightningutils;
 
+import com.velocitypowered.api.command.CommandSource;
 import com.velocitypowered.api.proxy.Player;
+import lombok.experimental.UtilityClass;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import net.kyori.adventure.text.minimessage.MiniMessage;
@@ -12,10 +14,11 @@ import java.io.OutputStream;
 import java.util.Arrays;
 import java.util.List;
 
+@UtilityClass
 public class Utils {
-    static MiniMessage mm = MiniMessage.miniMessage();
+    MiniMessage mm = MiniMessage.miniMessage();
 
-    static public boolean ExportResource(String resourceName, String relativeExportLocation) {
+    public boolean ExportResource(String resourceName, String relativeExportLocation) {
         InputStream stream = null;
         OutputStream resStreamOut = null;
         String jarFolder;
@@ -71,16 +74,16 @@ public class Utils {
         return success;
     }
 
-    public static boolean hasPermission(Player player, String permission) {
+    public boolean hasPermission(CommandSource source, String permission) {
         if (permission == null || permission.isEmpty()) return true;
         return
-            player.hasPermission("lightningutils." + permission) ||
-            player.hasPermission("lightningutils.*") ||
-            player.hasPermission("*");
+            source.hasPermission("lightningutils." + permission) ||
+            source.hasPermission("lightningutils.*") ||
+            source.hasPermission("*");
     }
 
     // use minimessage .deserialize and String.format
-    public static Component formatString(String string, Object... objects) {
+    public Component formatString(String string, Object... objects) {
         return mm.deserialize(String.format(string, objects));
     }
 
@@ -92,7 +95,7 @@ public class Utils {
     //
     // Generate Banner component
     // return list of seperate lines
-    public static List<Component> generateBanner(String text1, String text2) {
+    public List<Component> generateBanner(String text1, String text2) {
         return Arrays.asList(
             Component.newline(),
             Component.text(" |        |      |").color(NamedTextColor.GOLD),
@@ -103,7 +106,7 @@ public class Utils {
         );
     }
 
-    public static int getRandomInt(int min, int max) {
+    public int getRandomInt(int min, int max) {
         return (int) (Math.random() * (max - min + 1) + min);
     }
 }

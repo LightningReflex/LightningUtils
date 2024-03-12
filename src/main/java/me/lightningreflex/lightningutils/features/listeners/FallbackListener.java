@@ -11,6 +11,7 @@ import net.kyori.adventure.text.Component;
 import java.util.Optional;
 
 public class FallbackListener {
+
     // fallback to the lobby, don't ever kick from the network unless specified
     @Subscribe(order = PostOrder.LAST)
     public void onKickedFromServer(KickedFromServerEvent event) {

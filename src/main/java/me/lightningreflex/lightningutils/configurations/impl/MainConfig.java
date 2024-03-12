@@ -40,6 +40,13 @@ public class MainConfig {
             public String permission;
             public List<String> aliases;
         }
+        public StaffChat staffchat;
+        @Getter
+        public static class StaffChat {
+            public boolean enabled;
+            public String permission;
+            public List<String> aliases;
+        }
     }
 
     public Fallback fallback;
@@ -60,6 +67,15 @@ public class MainConfig {
     public static class Lobby {
         public String order;
         public List<String> valid_lobbies;
+    }
+
+    public StaffChat staffchat;
+    @Getter
+    public static class StaffChat {
+        public boolean enabled;
+        public boolean allow_toggle;
+        public boolean allow_prefix;
+        public String prefix;
     }
 
     // config-version

@@ -26,7 +26,7 @@ public class SendCommand {
     public BrigadierCommand createBrigadierCommand(String command) {
         LiteralCommandNode<CommandSource> node = LiteralArgumentBuilder
             .<CommandSource>literal(command)
-            .requires(ctx -> Utils.hasPermission((Player) ctx, commands.getSend().getPermission()))
+            .requires(ctx -> Utils.hasPermission(ctx, commands.getSend().getPermission()))
             .then(
                 BrigadierCommand.requiredArgumentBuilder(langSend.getArguments().getFrom(), StringArgumentType.word())
                     .suggests((ctx, builder) -> {
