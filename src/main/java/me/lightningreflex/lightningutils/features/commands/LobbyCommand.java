@@ -33,6 +33,12 @@ public class LobbyCommand {
                         LightningUtils.getProxy().getAllServers().stream()
                             .filter(server -> mainConfig.getLobby().getValid_lobbies().stream().anyMatch(server.getServerInfo().getName()::matches))
                             .filter(server -> !server.equals(((Player) ctx.getSource()).getCurrentServer().get().getServer()))
+                            .filter(server -> {
+                                String argument = ctx.getArguments().containsKey(langLobby.getArguments().getServer())
+                                    ? StringArgumentType.getString(ctx, langLobby.getArguments().getServer())
+                                    : "";
+                                return server.getServerInfo().getName().regionMatches(true, 0, argument, 0, argument.length());
+                            })
                             .map(server -> server.getServerInfo().getName())
                             .forEach(builder::suggest);
                         return builder.buildFuture();
