@@ -88,20 +88,20 @@ public class Utils {
     }
 
     //
-    // |        |      |
-    // |        |      |  Text
-    // |        |      |  Text
-    // |______  |______|
+    // ║        ║      ║
+    // ║        ║      ║  Text
+    // ║        ║      ║  Text
+    // ╚══════  ╚══════╝
     //
     // Generate Banner component
     // return list of seperate lines
     public List<Component> generateBanner(String text1, String text2) {
         return Arrays.asList(
             Component.newline(),
-            Component.text(" |        |      |").color(NamedTextColor.GOLD),
-            Component.text(" |        |      |  ").color(NamedTextColor.GOLD).append(Component.text(text1).color(NamedTextColor.YELLOW)),
-            Component.text(" |        |      |  ").color(NamedTextColor.GOLD).append(Component.text(text2).color(NamedTextColor.YELLOW)),
-            Component.text(" |______  |______|").color(NamedTextColor.GOLD),
+            Component.text(" ║        ║      ║").color(NamedTextColor.GOLD),
+            Component.text(" ║        ║      ║  ").color(NamedTextColor.GOLD).append(Component.text(text1).color(NamedTextColor.YELLOW)),
+            Component.text(" ║        ║      ║  ").color(NamedTextColor.GOLD).append(Component.text(text2).color(NamedTextColor.YELLOW)),
+            Component.text(" ╚══════  ╚══════╝").color(NamedTextColor.GOLD),
             Component.newline()
         );
     }
