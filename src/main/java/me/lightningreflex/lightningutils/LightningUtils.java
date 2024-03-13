@@ -62,11 +62,14 @@ public class LightningUtils {
         ListenerManager.registerListeners();
 
 //
-//        |        |      |
-//        |        |      |  LightningUtils - v1.0 (0ms)
-//        |        |      |  The speedy velocity utility plugin.
-//        |______  |______|
+//        ║        ║      ║
+//        ║        ║      ║  LightningUtils - v1.0 (0ms)
+//        ║        ║      ║  The speedy velocity utility plugin.
+//        ╚══════  ╚══════╝
 //
+
+    // Generate Banner component
+    // return list of seperate lines
         // Startup done lol
         for (Component component : Utils.generateBanner(
             "LightningUtils" + " - v" + BuildConstants.VERSION + " (" + (System.currentTimeMillis() - startupTime) + "ms)",
