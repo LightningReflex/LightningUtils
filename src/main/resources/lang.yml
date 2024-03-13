@@ -48,5 +48,13 @@ commands:
       message: 'message'
       invalid_syntax: '<red>✖</red> <gray>Invalid syntax! <gold>/staffchat <message></gold></gray>'
 
+  sudo:
+    success: '<green>✔</green> <gray>You have executed <gold>%1$s</gold> as <gold>%2$s</gold>.</gray>'
+    player_not_found: '<red>✖</red> <gray>The player <gold>%1$s</gold> is not online.</gray>'
+    arguments:
+      player: 'player'
+      text: 'text'
+      invalid_syntax: '<red>✖</red> <gray>Invalid syntax! <gold>/sudo <player> <command or message></gold></gray>'
+
 
 lang_version: 1.0

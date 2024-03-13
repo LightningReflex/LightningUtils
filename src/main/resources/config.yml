@@ -38,6 +38,12 @@ commands:
       - 'staffchat'
       - 'sc'
 
+  sudo:
+    enabled: true
+    permission: 'sudo'
+    aliases:
+      - 'sudo'
+
 
 # The fallback chain of where to send players
 # when they are kicked from a server.

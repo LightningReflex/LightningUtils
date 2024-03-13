@@ -25,6 +25,8 @@ public class CommandManager {
                 LightningUtils.getLogger().warn("The staffchat command is enabled but the feature is not enabled in the config. Command will not be registered.");
             }
         }
+        if (commands.getSudo().isEnabled())
+            registerCommand(new SudoCommand().createBrigadierCommand(commands.getSudo().getAliases().get(0)), commands.getSudo().getAliases());
     }
 
     private static void registerCommand(BrigadierCommand commandClass,  List<String> aliases) {

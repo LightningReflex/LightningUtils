@@ -19,12 +19,11 @@ A fully configurable and easy to use plugin with a variety of features and comma
   - [X] Lobby/hub
   - [X] Send
   - [X] StaffChat
+  - [X] Sudo (COMMANDS ONLY)
   - [ ] Server
   - [ ] Find
   - [ ] Ip
   - [ ] Message/reply
-  - [ ] Sudo (possibly)
-  - 
 
 - Features
   - [X] Configs

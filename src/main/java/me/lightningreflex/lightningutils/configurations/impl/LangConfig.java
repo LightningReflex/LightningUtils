@@ -79,6 +79,21 @@ public class LangConfig extends Config {
                 public String invalid_syntax;
             }
         }
+
+        public Sudo sudo;
+        @Getter
+        public static class Sudo {
+            public String success;
+            public String player_not_found;
+
+            public Arguments arguments;
+            @Getter
+            public static class Arguments {
+                public String player;
+                public String text;
+                public String invalid_syntax;
+            }
+        }
     }
 
     public float lang_version;

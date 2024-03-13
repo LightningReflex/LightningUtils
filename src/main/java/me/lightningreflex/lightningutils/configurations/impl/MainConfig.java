@@ -47,6 +47,14 @@ public class MainConfig {
             public String permission;
             public List<String> aliases;
         }
+
+        public Sudo sudo;
+        @Getter
+        public static class Sudo {
+            public boolean enabled;
+            public String permission;
+            public List<String> aliases;
+        }
     }
 
     public Fallback fallback;
