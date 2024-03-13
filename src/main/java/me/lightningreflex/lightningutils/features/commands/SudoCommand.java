@@ -67,6 +67,7 @@ public class SudoCommand {
         // force a slash cause like, non-commands will cause a signature error
         if (!text.startsWith("/")) text = "/" + text;
         connectedVictim.spoofChatInput(text);
+        context.getSource().sendMessage(Utils.formatString(langSudo.getSuccess(), playerName, text));
         return 1; // indicates success
     }
 
