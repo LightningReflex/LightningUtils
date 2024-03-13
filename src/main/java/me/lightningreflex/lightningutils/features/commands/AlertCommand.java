@@ -34,7 +34,7 @@ public class AlertCommand {
     }
 
     private int execute(CommandContext<CommandSource> context) {
-        String message = StringArgumentType.getString(context, "message");
+        String message = StringArgumentType.getString(context, langAlert.getArguments().getMessage());
         for (Player player : LightningUtils.getProxy().getAllPlayers()) {
             player.sendMessage(Utils.formatString(langAlert.getMessage(), message));
         }
