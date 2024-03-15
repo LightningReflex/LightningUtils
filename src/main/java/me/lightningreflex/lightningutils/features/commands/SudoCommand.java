@@ -27,7 +27,7 @@ public class SudoCommand {
     public BrigadierCommand createBrigadierCommand(String command) {
         LiteralCommandNode<CommandSource> node = LiteralArgumentBuilder
             .<CommandSource>literal(command)
-            .requires(ctx -> Utils.hasPermission(ctx, commands.getAlert().getPermission()))
+            .requires(ctx -> Utils.hasPermission(ctx, commands.getSudo().getPermission()))
             .then(
                 BrigadierCommand.requiredArgumentBuilder(langSudo.getArguments().getPlayer(), StringArgumentType.word())
                     .suggests((ctx, builder) -> {
