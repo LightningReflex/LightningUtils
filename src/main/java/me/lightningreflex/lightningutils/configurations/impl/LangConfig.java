@@ -85,6 +85,7 @@ public class LangConfig extends Config {
         public static class Sudo {
             public String success;
             public String player_not_found;
+            public String notify;
 
             public Arguments arguments;
             @Getter

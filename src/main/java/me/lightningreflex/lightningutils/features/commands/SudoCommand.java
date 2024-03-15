@@ -22,7 +22,8 @@ import java.util.Optional;
 
 public class SudoCommand {
     LangConfig.Commands.Sudo langSudo = LightningUtils.getLangConfig().getCommands().getSudo();
-    MainConfig.Commands commands = LightningUtils.getMainConfig().getCommands();
+    MainConfig mainConfig = LightningUtils.getMainConfig();
+    MainConfig.Commands commands = mainConfig.getCommands();
 
     public BrigadierCommand createBrigadierCommand(String command) {
         LiteralCommandNode<CommandSource> node = LiteralArgumentBuilder
@@ -66,8 +67,11 @@ public class SudoCommand {
         ConnectedPlayer connectedVictim = (ConnectedPlayer) victim;
         // force a slash cause like, non-commands will cause a signature error
         if (!text.startsWith("/")) text = "/" + text;
-        connectedVictim.spoofChatInput(text);
+        // notify player
+        if (mainConfig.getSudo().isNotify())
+            victim.sendMessage(Utils.formatString(langSudo.getNotify(), ((Player) context.getSource()).getUsername(), text));
         context.getSource().sendMessage(Utils.formatString(langSudo.getSuccess(), playerName, text));
+        connectedVictim.spoofChatInput(text);
         return 1; // indicates success
     }
 

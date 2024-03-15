@@ -92,6 +92,12 @@ public class MainConfig {
         public String prefix;
     }
 
+    public Sudo sudo;
+    @Getter
+    public static class Sudo {
+        public boolean notify;
+    }
+
     // config-version
     public float config_version;
     //------------------------------------------------

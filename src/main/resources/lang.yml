@@ -51,6 +51,7 @@ commands:
   sudo:
     success: '<green>✔</green> <gray>You have executed <gold>%1$s</gold> as <gold>%2$s</gold>.</gray>'
     player_not_found: '<red>✖</red> <gray>The player <gold>%1$s</gold> is not online.</gray>'
+    notify: '<gold>⚠</gold> <gold>%1$s</gold> forced you to execute <gold>%2$s</gold>.'
     arguments:
       player: 'player'
       text: 'text'

@@ -103,4 +103,9 @@ staffchat:
   # The prefix to use for the staff chat.
   prefix: '$'
 
+sudo:
+  # Whether to have the player sudo'd notified that
+  # they were forced to execute a command.
+  notify: false
+
 config_version: 1.0
