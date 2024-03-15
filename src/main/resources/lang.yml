@@ -49,7 +49,7 @@ commands:
       invalid_syntax: '<red>✖</red> <gray>Invalid syntax! <gold>/staffchat <message></gold></gray>'
 
   sudo:
-    success: '<green>✔</green> <gray>You have executed <gold>%1$s</gold> as <gold>%2$s</gold>.</gray>'
+    success: '<green>✔</green> <gray>You have made <gold>%1$s</gold> execute <gold>%2$s</gold>.</gray>'
     player_not_found: '<red>✖</red> <gray>The player <gold>%1$s</gold> is not online.</gray>'
     notify: '<gold>⚠</gold> <gray><gold>%1$s</gold> forced you to execute <gold>%2$s</gold>.</gray>'
     arguments:
