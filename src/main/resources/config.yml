@@ -50,6 +50,12 @@ commands:
     aliases:
       - 'find'
 
+  ip:
+    enabled: true
+    permission: 'ip'
+    aliases:
+      - 'ip'
+
 
 # The fallback chain of where to send players
 # when they are kicked from a server.

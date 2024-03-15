@@ -61,6 +61,13 @@ public class MainConfig {
             public String permission;
             public List<String> aliases;
         }
+        public Ip ip;
+        @Getter
+        public static class Ip {
+            public boolean enabled;
+            public String permission;
+            public List<String> aliases;
+        }
     }
 
     public Fallback fallback;

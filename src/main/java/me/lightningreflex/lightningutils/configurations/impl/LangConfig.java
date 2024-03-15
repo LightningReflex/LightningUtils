@@ -109,6 +109,20 @@ public class LangConfig extends Config {
                 public String invalid_syntax;
             }
         }
+
+        public Ip ip;
+        @Getter
+        public static class Ip {
+            public String success;
+            public String player_not_found;
+
+            public Arguments arguments;
+            @Getter
+            public static class Arguments {
+                public String player;
+                public String invalid_syntax;
+            }
+        }
     }
 
     public float lang_version;
