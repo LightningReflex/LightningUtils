@@ -21,8 +21,13 @@ A fully configurable and easy to use plugin with a variety of features and comma
   - [X] Send
   - [X] StaffChat
   - [X] Sudo (COMMANDS ONLY)
-  - [X] Ip (No history for now)
   - [ ] Message/reply
+  - [ ] Moderation
+    - [X] Ip (No history for now)
+    - [ ] Alts
+    - [ ] Ban
+    - [ ] History
+    - [ ] Kick
   - [ ] Server
 
 - Features
