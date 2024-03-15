@@ -65,7 +65,7 @@ commands:
       invalid_syntax: '<red>✖</red> <gray>Invalid syntax! <gold>/find <player></gold></gray>'
 
   ip:
-    success: '<green>✔</green> <gold>%1$s's</gold> <gray>IP is <gold>%2$s</gold>.</gray>'
+    success: "<green>✔</green> <gold>%1$s's</gold> <gray>IP is <gold>%2$s</gold>.</gray>"
     player_not_found: '<red>✖</red> <gray>The player <gold>%1$s</gold> is not online.</gray>'
     arguments:
       player: 'player'
