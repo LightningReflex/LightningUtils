@@ -94,6 +94,20 @@ public class LangConfig extends Config {
                 public String invalid_syntax;
             }
         }
+
+        public Find find;
+        @Getter
+        public static class Find {
+            public String success;
+            public String player_not_found;
+
+            public Arguments arguments;
+            @Getter
+            public static class Arguments {
+                public String player;
+                public String invalid_syntax;
+            }
+        }
     }
 
     public float lang_version;

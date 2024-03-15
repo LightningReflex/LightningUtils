@@ -27,6 +27,9 @@ public class CommandManager {
         }
         if (commands.getSudo().isEnabled())
             registerCommand(new SudoCommand().createBrigadierCommand(commands.getSudo().getAliases().get(0)), commands.getSudo().getAliases());
+        if (commands.getFind().isEnabled())
+            registerCommand(new FindCommand().createBrigadierCommand(commands.getFind().getAliases().get(0)), commands.getFind().getAliases());
+
     }
 
     private static void registerCommand(BrigadierCommand commandClass,  List<String> aliases) {

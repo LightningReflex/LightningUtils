@@ -16,20 +16,20 @@ A fully configurable and easy to use plugin with a variety of features and comma
 ## Features
 - Commands
   - [X] Alert
+  - [X] Find
   - [X] Lobby/hub
   - [X] Send
   - [X] StaffChat
   - [X] Sudo (COMMANDS ONLY)
-  - [ ] Server
-  - [ ] Find
   - [ ] Ip
   - [ ] Message/reply
+  - [ ] Server
 
 - Features
   - [X] Configs
     - [X] Configurable messages
-    - [X] Toggleable features
     - [X] Modifiable command aliases and permissions
+    - [X] Toggleable features
   - [X] Fallback server(s)
 
 ---

@@ -44,6 +44,12 @@ commands:
     aliases:
       - 'sudo'
 
+  find:
+    enabled: true
+    permission: 'find'
+    aliases:
+      - 'find'
+
 
 # The fallback chain of where to send players
 # when they are kicked from a server.
