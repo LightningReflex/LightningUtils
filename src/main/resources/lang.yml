@@ -20,7 +20,7 @@ commands:
       invalid_syntax: '<red>✖</red> <gray>Invalid syntax! <gold>/send <from> <to></gold></gray>'
 
   alert:
-    message: '<red><bold>ALERT</bold></red> <gray>%1$s</gray>'
+    message: '<gold>⚠</gold> <gray>%1$s</gray>'
 
     arguments:
       message: 'message'
