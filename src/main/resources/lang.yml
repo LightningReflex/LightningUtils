@@ -13,7 +13,6 @@ commands:
     warning_player: '<gold>⚠</gold> <gray>You have been sent to <gold>%1$s</gold> by <gold>%2$s</gold>.</gray>'
     server_does_not_exist: '<red>✖</red> <gray>The server <gold>%1$s</gold> does not exist.</gray>'
     player_offline: '<red>✖</red> <gray>The player <gold>%1$s</gold> is not online.</gray>'
-
     arguments:
       from: 'from'
       to: 'to'
@@ -21,7 +20,6 @@ commands:
 
   alert:
     message: '<gold>⚠</gold> <gray>%1$s</gray>'
-
     arguments:
       message: 'message'
       invalid_syntax: '<red>✖</red> <gray>Invalid syntax! <gold>/alert <message></gold></gray>'
@@ -43,7 +41,6 @@ commands:
     toggle_disabled: '<red>✖</red> <gray>Staff chat toggling is <gold>disabled<gold> in the config.</gray>'
     enabled: '<green>✔</green> <gray>Staff chat has been <gold>enabled</gold>.</gray>'
     disabled: '<red>✖</red> <gray>Staff chat has been <gold>disabled</gold>.</gray>'
-
     arguments:
       message: 'message'
       invalid_syntax: '<red>✖</red> <gray>Invalid syntax! <gold>/staffchat <message></gold></gray>'
