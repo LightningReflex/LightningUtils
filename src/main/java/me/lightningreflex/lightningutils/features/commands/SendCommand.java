@@ -55,7 +55,7 @@ public class SendCommand {
     }
 
     private CompletableFuture<Suggestions> getSuggestionsCompletableFuture(SuggestionsBuilder builder, String argument) {
-        LightningUtils.getProxy().getAllServers().stream().filter((server) -> server.getServerInfo().getName().regionMatches(true, 0, argument, 0, argument.length())).forEach(server -> builder.suggest("+" + server.getServerInfo().getName()));
+        LightningUtils.getProxy().getAllServers().stream().filter((server) -> ("+" + server.getServerInfo().getName()).regionMatches(true, 0, argument, 0, argument.length())).forEach(server -> builder.suggest("+" + server.getServerInfo().getName()));
         LightningUtils.getProxy().getAllPlayers().stream().filter((player) -> player.getUsername().regionMatches(true, 0, argument, 0, argument.length())).forEach(player -> builder.suggest(player.getUsername()));
         return builder.buildFuture();
     }
