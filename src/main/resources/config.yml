@@ -114,4 +114,20 @@ sudo:
   # they were forced to execute a command.
   notify: false
 
-config_version: 1.0
+clearchat:
+  # Whether to clear chat upon switching servers,
+  # or joining the network.
+  #
+  # Please note that messages from commands such
+  # as /server and /join, will be cleared too. So
+  # users may not be able to see the response of
+  # the commands which transfer players between
+  # servers.
+  enabled: true
+  # Whether to clear chat when the player
+  # initially connects to the network. This may
+  # clear any message sent on the same tick when
+  # the player joins.
+  network_join: false
+
+config_version: 1.1

@@ -33,6 +33,7 @@ A fully configurable and easy to use plugin with a variety of features and comma
     - [X] Modifiable command aliases and permissions
     - [X] Toggleable features
   - [X] Fallback server(s)
+  - [X] Clear chat on join or switch server
 
 ## Suggestions and Issues
 If you have any suggestions or issues, feel free to open an issue or pull request. I'm always open to new ideas and improvements.

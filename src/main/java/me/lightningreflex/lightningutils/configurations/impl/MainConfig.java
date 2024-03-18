@@ -105,8 +105,15 @@ public class MainConfig {
         public boolean notify;
     }
 
+    public Clearchat clearchat;
+    @Getter
+    public static class Clearchat {
+        public boolean enabled;
+        public boolean network_join;
+    }
+
     // config-version
-    public float config_version;
+    public double config_version;
     //------------------------------------------------
 
     public MainConfig load(final String path) {
@@ -140,7 +147,7 @@ public class MainConfig {
 
     public MainConfig validate(final String path, MainConfig currentConfig) {
         // move config.yml to config-version.yml and create new config.yml
-        if (currentConfig.getConfig_version() != 1.0) {
+        if (currentConfig.getConfig_version() != 1.1) {
             // move
             Path dataPath = LightningUtils.getDataDirectory();
             Path configPath = dataPath.resolve(path);

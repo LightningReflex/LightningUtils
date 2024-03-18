@@ -75,8 +75,8 @@ public class SendCommand {
                         // Server to server
                         player.sendMessage(Utils.formatString(langSend.getSuccess_executor(), args[1], args[2]));
                         for (Player p : sourceServer.get().getPlayersConnected()) {
-                            p.sendMessage(Utils.formatString(langSend.getWarning_player(), args[2], player.getUsername()));
                             p.createConnectionRequest(destServer.get()).fireAndForget();
+                            p.sendMessage(Utils.formatString(langSend.getWarning_player(), args[2], player.getUsername()));
                         }
 
                     } else { // Server is invalid
@@ -91,8 +91,8 @@ public class SendCommand {
                         // Server to player
                         player.sendMessage(Utils.formatString(langSend.getSuccess_executor(), args[1], args[2]));
                         for (Player p : sourceServer.get().getPlayersConnected()) {
-                            p.sendMessage(Utils.formatString(langSend.getWarning_player(), args[2], player.getUsername()));
                             p.createConnectionRequest(destPlayer.get().getCurrentServer().get().getServer()).fireAndForget();
+                            p.sendMessage(Utils.formatString(langSend.getWarning_player(), args[2], player.getUsername()));
                         }
 
                     } else { // Player is invalid
@@ -117,8 +117,8 @@ public class SendCommand {
                     if (destServer.isPresent()) { // Check if server exists
                         // Player to server
                         player.sendMessage(Utils.formatString(langSend.getSuccess_executor(), args[1], args[2]));
-                        sourcePlayer.get().sendMessage(Utils.formatString(langSend.getWarning_player(), args[2], player.getUsername()));
                         sourcePlayer.get().createConnectionRequest(destServer.get()).fireAndForget();
+                        sourcePlayer.get().sendMessage(Utils.formatString(langSend.getWarning_player(), args[2], player.getUsername()));
 
                     } else { // Server is invalid
                         player.sendMessage(Utils.formatString(langSend.getServer_does_not_exist(), args[2]));
@@ -130,8 +130,8 @@ public class SendCommand {
 
                     if (destPlayer.isPresent()) { // Check if player exists
                         // Player to player
-                        player.sendMessage(Utils.formatString(langSend.getSuccess_executor(), args[1], args[2]));
                         sourcePlayer.get().createConnectionRequest(destPlayer.get().getCurrentServer().get().getServer()).fireAndForget();
+                        player.sendMessage(Utils.formatString(langSend.getSuccess_executor(), args[1], args[2]));
 
                     } else { // Player is invalid
                         player.sendMessage(Utils.formatString(langSend.getPlayer_offline(), args[2]));

@@ -125,7 +125,7 @@ public class LangConfig extends Config {
         }
     }
 
-    public float lang_version;
+    public double lang_version;
     //------------------------------------------------
 
     public LangConfig load(final String path) {

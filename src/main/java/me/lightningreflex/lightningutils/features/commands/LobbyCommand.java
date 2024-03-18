@@ -89,8 +89,8 @@ public class LobbyCommand {
             }
             // Server is a valid lobby, send player to that server
             Player player = (Player) context.getSource();
-            player.sendMessage(Utils.formatString(langLobby.getSuccess(), server));
             player.createConnectionRequest(serverArgument.get()).fireAndForget();
+            player.sendMessage(Utils.formatString(langLobby.getSuccess(), server));
         }
 
 //        # Order to send players in.
@@ -110,16 +110,16 @@ public class LobbyCommand {
             // send player to random lobby
             Player player = (Player) context.getSource();
             RegisteredServer randomLobby = validLobbies.get(Utils.getRandomInt(0, validLobbies.size() - 1));
-            player.sendMessage(Utils.formatString(langLobby.getSuccess(), randomLobby.getServerInfo().getName()));
             player.createConnectionRequest(randomLobby).fireAndForget();
+            player.sendMessage(Utils.formatString(langLobby.getSuccess(), randomLobby.getServerInfo().getName()));
         } else if (order.equals("priority")) {
             // send player to lobby with the least players
             Player player = (Player) context.getSource();
             RegisteredServer leastPlayersLobby = validLobbies.stream()
                 .min(Comparator.comparingInt(server2 -> server2.getPlayersConnected().size()))
                 .orElseThrow();
-            player.sendMessage(Utils.formatString(langLobby.getSuccess(), leastPlayersLobby.getServerInfo().getName()));
             player.createConnectionRequest(leastPlayersLobby).fireAndForget();
+            player.sendMessage(Utils.formatString(langLobby.getSuccess(), leastPlayersLobby.getServerInfo().getName()));
         }
         return 1; // indicates success
     }
