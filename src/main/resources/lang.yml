@@ -55,7 +55,7 @@ commands:
       invalid_syntax: '<red>✖</red> <gray>Invalid syntax! <gold>/sudo <player> <command or message></gold></gray>'
 
   find:
-    success: '<green>✔</green> <gold>%1$s</gold> <gray>is on server <gold>%2$s</gold>.</gray>'
+    success: '<green>✔</green> <click:run_command:/server %2$s><hover:show_text:"<gray>Click to connect to <gold>%2$s</gold>.</gray>"><gold>%1$s</gold> <gray>is on server <gold>%2$s</gold>.</gray></hover></click>'
     player_not_found: '<red>✖</red> <gray>The player <gold>%1$s</gold> is not online.</gray>'
     arguments:
       player: 'player'
