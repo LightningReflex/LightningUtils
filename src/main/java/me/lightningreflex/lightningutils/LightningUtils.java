@@ -39,18 +39,25 @@ public class LightningUtils {
     @Getter
     private static LangConfig langConfig;
 
+    private final Metrics.Factory metricsFactory;
+
 
     @Inject
-    public LightningUtils(final ProxyServer proxy, Logger logger, @DataDirectory Path dataDirectory) {
+    public LightningUtils(final ProxyServer proxy, Logger logger, @DataDirectory Path dataDirectory, Metrics.Factory metricsFactory) {
         LightningUtils.proxy = proxy;
         LightningUtils.logger = logger;
         LightningUtils.dataDirectory = dataDirectory;
+        this.metricsFactory = metricsFactory;
         instance = this;
     }
 
     @Subscribe
     public void onProxyInitialization(ProxyInitializeEvent event) {
         long startupTime = System.currentTimeMillis();
+
+        // bstats
+        int pluginId = 21360;
+        Metrics metrics = metricsFactory.make(this, pluginId);
 
         // Load config
         langConfig = new LangConfig().load("lang.yml");
