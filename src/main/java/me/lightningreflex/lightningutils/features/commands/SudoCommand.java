@@ -7,17 +7,12 @@ import com.mojang.brigadier.tree.LiteralCommandNode;
 import com.velocitypowered.api.command.BrigadierCommand;
 import com.velocitypowered.api.command.CommandSource;
 import com.velocitypowered.api.proxy.Player;
-import com.velocitypowered.api.proxy.ProxyServer;
-import com.velocitypowered.proxy.VelocityServer;
 import com.velocitypowered.proxy.connection.client.ConnectedPlayer;
-import com.velocitypowered.proxy.network.ConnectionManager;
 import me.lightningreflex.lightningutils.LightningUtils;
-import me.lightningreflex.lightningutils.Utils;
+import me.lightningreflex.lightningutils.utils.Utils;
 import me.lightningreflex.lightningutils.configurations.impl.LangConfig;
 import me.lightningreflex.lightningutils.configurations.impl.MainConfig;
-import org.slf4j.Logger;
 
-import java.lang.reflect.Field;
 import java.util.Optional;
 
 public class SudoCommand {

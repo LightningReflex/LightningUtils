@@ -2,7 +2,7 @@ package me.lightningreflex.lightningutils.configurations.impl;
 
 import lombok.Getter;
 import me.lightningreflex.lightningutils.LightningUtils;
-import me.lightningreflex.lightningutils.Utils;
+import me.lightningreflex.lightningutils.utils.Utils;
 import me.lightningreflex.lightningutils.configurations.Config;
 import org.yaml.snakeyaml.LoaderOptions;
 import org.yaml.snakeyaml.Yaml;

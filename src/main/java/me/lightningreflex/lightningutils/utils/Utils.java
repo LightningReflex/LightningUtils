@@ -1,8 +1,9 @@
-package me.lightningreflex.lightningutils;
+package me.lightningreflex.lightningutils.utils;
 
 import com.velocitypowered.api.command.CommandSource;
 import com.velocitypowered.api.proxy.Player;
 import lombok.experimental.UtilityClass;
+import me.lightningreflex.lightningutils.LightningUtils;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import net.kyori.adventure.text.minimessage.MiniMessage;
